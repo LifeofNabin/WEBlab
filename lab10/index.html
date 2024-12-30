@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Demo Program</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #666;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ajax Demo Program</h1>
+
+        <h2>a. Ajax-like operation without jQuery</h2>
+        <button onclick="operationWithoutJQuery()">Perform Operation (without jQuery)</button>
+        <pre id="result-a"></pre>
+
+        <h2>b. Ajax-like operation with jQuery</h2>
+        <button onclick="operationWithJQuery()">Perform Operation (with jQuery)</button>
+        <pre id="result-b"></pre>
+
+        <h2>c. jQuery-like getJSON() method</h2>
+        <button onclick="getJSONOperation()">Get JSON</button>
+        <pre id="result-c"></pre>
+
+        <h2>d. jQuery parseJSON() method</h2>
+        <button onclick="parseJSONExample()">Parse JSON</button>
+        <pre id="result-d"></pre>
+    </div>
+
+    <script>
+        // Simulated data for demonstration purposes
+        const simulatedData = {
+            text: "This is a sample text fetched from a simulated server response.",
+            json: {
+                name: "John Doe",
+                age: 30,
+                city: "New York"
+            }
+        };
+
+        // a. Ajax-like operation without jQuery
+        function operationWithoutJQuery() {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'textfile.txt', true);  // This will request the textfile.txt from the same directory
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    document.getElementById("result-a").textContent = xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
+
+        // b. Ajax-like operation with jQuery
+        function operationWithJQuery() {
+            $.ajax({
+                url: 'textfile.txt',  // This will request the textfile.txt from the same directory
+                method: 'GET',
+                success: function(response) {
+                    $("#result-b").text(response);
+                },
+                error: function() {
+                    $("#result-b").text("An error occurred while fetching the file.");
+                }
+            });
+        }
+
+        // c. jQuery-like getJSON() method
+        function getJSONOperation() {
+            $.getJSON('data.json', function(response) {  // This will request the data.json from the same directory
+                $("#result-c").text(JSON.stringify(response, null, 2));
+            }).fail(function() {
+                $("#result-c").text("An error occurred while fetching the JSON file.");
+            });
+        }
+
+        // d. jQuery parseJSON() method
+        function parseJSONExample() {
+            var jsonString = JSON.stringify(simulatedData.json);  // Simulate a JSON string
+            var jsonObject = $.parseJSON(jsonString);  // Parse the JSON string
+            $("#result-d").text(JSON.stringify(jsonObject, null, 2));  // Display the parsed JSON
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON and CSV Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-family: monospace;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .output {
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>JSON and CSV Converter</h1>
+
+    <!-- JSON to Object -->
+    <h2>Convert JSON to JavaScript Object</h2>
+    <textarea id="jsonInput" placeholder="Enter JSON text"></textarea><br>
+    <button>Convert JSON</button>
+    <div class="output" id="jsonObjectOutput">Converted Object will appear here...</div>
+
+    <!-- JSON to Date -->
+    <h2>Convert JSON Date</h2>
+    <textarea id="jsonDateInput" placeholder="Enter JSON with date"></textarea><br>
+    <button>Convert Date</button>
+    <div class="output" id="jsonDateOutput">Converted Date will appear here...</div>
+
+    <!-- JSON to CSV -->
+    <h2>Convert JSON to CSV</h2>
+    <textarea id="jsonCsvInput" placeholder="Enter JSON array"></textarea><br>
+    <button>Convert to CSV</button>
+    <div class="output" id="csvOutput">CSV output will appear here...</div>
+
+    <!-- CSV to JSON -->
+    <h2>Convert CSV to JSON</h2>
+    <textarea id="csvJsonInput" placeholder="Enter CSV data"></textarea><br>
+    <button>Convert to JSON</button>
+    <div class="output" id="jsonFromCsvOutput">JSON output will appear here...</div>
+
+    <!-- Hash Generator -->
+    <h2>Create SHA256 Hash</h2>
+    <textarea id="hashInput" placeholder="Enter text to hash"></textarea><br>
+    <button>Generate Hash</button>
+    <div class="output" id="hashOutput">Generated Hash will appear here...</div>
+</div>
+
+</body>
+</html>

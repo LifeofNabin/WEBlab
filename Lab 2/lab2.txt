@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1CD22CS090 Timetable-</title>
+    <style>
+        /* Increase the height of table rows */
+        table td {
+            height: 50px; /* Set row height */
+            padding: 10px; /* Add padding for more space */
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Cambridge Institute of Technology</h2>
+    <h3 style="text-align: center;">Department of Computer Science & Engineering</h3>
+    <h4 style="text-align: center;">Semester: V | Section: A | Room No: G4</h4>
+    <table border="1" style="border-collapse: collapse; width: 100%; text-align: center;">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>8:30 - 9:25 AM</th>
+                <th>9:25 - 10:20 AM</th>
+                <th>10:20 - 10:40 AM</th>
+                <th>10:40 - 11:35 AM</th>
+                <th>11:35 - 12:30 PM</th>
+                <th>12:30 - 1:10 PM</th>
+                <th>1:10 - 2:05 PM</th>
+                <th>2:05 - 3:00 PM</th>
+                <th>3:00 - 3:55 PM</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td style="background-color: #ffcccb;">AI</td>
+                <td>TOC</td>
+                <td rowspan="6" colspan="1">Tea Break</td>
+                <td>CN</td>
+                <td>RM&IPR</td>
+                <td rowspan="6" colspan="1">Lunch Break</td>
+                <td>SEPM (TUT)</td>
+                <td>RM&IPR</td>
+                <td>COUNSELL</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>SEPM</td>
+                <td>CN</td>
+                <td>TOC</td>
+                <td style="background-color: #ffcccb;">AI</td>
+                <td>TOC (TUT)</td>
+                <td>MINI PROJECT</td>
+                <td>LIBRAR</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td style="background-color: #ffcccb;">AI</td>
+                <td>SEPM</td>
+                <td>CN</td>
+                <td>RM&IPR</td>
+                <td>INSYNC</td>
+                <td>NCMC</td>
+                <td>EVS</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>TOC</td>
+                <td>RM&IPR</td>
+                <td colspan="2" style="background-color: #ffcccb;">CN A2/WEB A2 LAB</td>
+                <td colspan="3" rowspan="1">REMEDIAL</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>SEPM</td>
+                <td>CN</td>
+                <td colspan="2" style="background-color: #ffcccb;">CN A1/WEB A2 LAB</td>
+                <td colspan="3" rowspan="1">LIBRARY</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

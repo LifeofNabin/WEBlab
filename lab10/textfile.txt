@@ -1,0 +1,2 @@
+This is the content of the text file.
+This is what will be displayed when fetched by the AJAX request.
